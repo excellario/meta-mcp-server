@@ -34,8 +34,8 @@ dependencies = [
 meta-insights-mcp = "meta_insights_mcp.server:main"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/meta-insights-mcp"
-Issues = "https://github.com/yourusername/meta-insights-mcp/issues"
+Homepage = "https://github.com/excellario/meta-mcp-server"
+Issues = "https://github.com/excellario/meta-mcp-server/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["meta_insights_mcp"]
