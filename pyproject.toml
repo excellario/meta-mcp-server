@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "meta-insights-mcp"
+version = "0.1.0"
+description = "MCP server exposing Meta (Facebook/Instagram) business insights via the Graph and Marketing APIs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "praise", email = "praisetaiwo24@gmail.com" },
+]
+keywords = ["mcp", "meta", "facebook", "instagram", "marketing-api", "graph-api", "insights"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "mcp[cli]>=1.2.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.6.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+meta-insights-mcp = "meta_insights_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/meta-insights-mcp"
+Issues = "https://github.com/yourusername/meta-insights-mcp/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["meta_insights_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "meta_insights_mcp/",
+    "README.md",
+    "LICENSE",
+    "pyproject.toml",
+]
